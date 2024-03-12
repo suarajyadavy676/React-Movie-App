@@ -25,7 +25,7 @@ function Drawers() {
           <Link to="/">Home</Link>         
           </DrawerHeader>
           <DrawerBody>
-          <Link to={`/action-adventure/`}>Action</Link>
+          <Link to="/action-adventure">Action</Link>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
