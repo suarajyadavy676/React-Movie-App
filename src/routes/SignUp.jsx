@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link, json } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [signUpData,setSignUpData] = useState({name:"",email:"",password:""})
   // console.log(signUpData)
+  const navigate = useNavigate()
   function handleChange(e){
     setSignUpData({...signUpData,[e.target.name]:e.target.value})
   }
@@ -11,6 +12,8 @@ function SignUp() {
     e.preventDefault()
     // console.log("click",signUpData)
     localStorage.setItem("loginData",JSON.stringify(signUpData))
+    navigate('/login')
+
   }
   return (
     <div className="w-96 mx-auto mt-20 backdrop-blur-lg bg-opacity-80 rounded-lg shadow-lg p-5 bg-gray-900 text-white">

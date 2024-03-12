@@ -5,7 +5,7 @@ function PrivateRoutes({children}) {
   const {state} = useContext(GlobalContext)
   const {loginEmail, loginPassword} = state
   // console.log("email : ",loginEmail,"password: ",loginPassword)
-  console.log(state)
+  // console.log(state)
   let  {email,password} = JSON.parse(localStorage.getItem("loginData"))
   // console.log(localData)
   if(!(loginEmail == email && loginPassword == password)){
