@@ -1,18 +1,35 @@
-import { Routes,Route } from 'react-router-dom'
-import AllMovie from '../components/AllMovie'
-import Search from './Search'
-import Action from './Action'
-import MovieDeatails from '../components/MovieDeatails'
+import { Routes, Route } from "react-router-dom";
+import SignUp from "./SignUp";
+import Login from "./Login";
+import AllMovie from "../components/AllMovie";
+import Search from "./Search";
+import Action from "./Action";
+import MovieDeatails from "../components/MovieDeatails";
+import PrivateRoutes from "../components/PrivateRoutes";
+import Error from "../components/Error";
 
 function AllRoutes() {
   return (
     <Routes>
-    <Route path='/' element={<AllMovie/>}/>
-    <Route path='/search' element={<Search/>}/>
-    <Route path='/action-adventure' element={<Action/>}/>
-    <Route path='/action-adventure/movie/details/:id' element={<MovieDeatails/>}/>
+      <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<AllMovie />} />
+      <Route path="/search" element={<Search />} />
+      <Route
+        path="/action-adventure"
+        element={
+          <PrivateRoutes>
+            <Action />
+          </PrivateRoutes>
+        }
+      />
+      <Route
+        path="/action-adventure/movie/details/:id"
+        element={<MovieDeatails />}
+      />
+      <Route path="/error" element={<Error />} />
     </Routes>
-  )
+  );
 }
 
-export default AllRoutes
+export default AllRoutes;

@@ -5,6 +5,9 @@ import { createContext, useReducer } from 'react'
     case "search":{
       return {...state,...payload}
     }
+    case "loginInfo":{
+      return {...state,...payload}
+    }
     default:{
       throw new Error("Invalid action type")
     }
