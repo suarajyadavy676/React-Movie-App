@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 function Footer() {
   return (
-    <div className="text-red-900 text-center my-3 w-5/6 m-auto">
-      <h1 className="text-red-900">
+    <div className="text-white text-center mt-3 pb-3 m-auto font-serif bg-black">
+      <h1>
         Ready to watch? Enter your email to create or restart your membership.
       </h1>
       <div className="flex justify-center mt-4 flex-wrap">
         <input
           type="email"
           placeholder="Email Address"
-          className=" text-center border-2 border-black border-solid mr-10"
+          className=" text-center text-black border-2 border-black border-solid mr-10"
         />
-        <button className="bg-red-600 rounded-lg text-white mt-3 sm:mt-0">
+        <button className="bg-red-600 rounded-lg text-white mt-3 sm:mt-0 p-2">
           Get Started{">"}
         </button>
       </div>

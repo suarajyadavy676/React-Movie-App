@@ -18,17 +18,17 @@ function Drawers() {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
-        <GiHamburgerMenu />
+      <Button ref={btnRef} colorScheme="none" onClick={onOpen}>
+        <GiHamburgerMenu className="text-2xl" />
       </Button>
       <Drawer
         isOpen={isOpen}
-        placement="right"
+        placement="left"
         onClose={onClose}
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent bg={"black"} textColor={"white"}>
           <DrawerCloseButton />
           <DrawerHeader>
             <Link to="/" className="hover:text-red-600 hover:underline">Home</Link>

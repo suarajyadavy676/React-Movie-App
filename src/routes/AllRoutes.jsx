@@ -7,9 +7,12 @@ import Action from "./Action";
 import MovieDeatails from "../components/MovieDeatails";
 import PrivateRoutes from "../components/PrivateRoutes";
 import Error from "../components/Error";
+import Background from "../components/Background";
 
 function AllRoutes() {
   return (
+    <>
+    <Background/>
     <Routes>
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/login" element={<Login />} />
@@ -29,6 +32,7 @@ function AllRoutes() {
       />
       <Route path="/error" element={<Error />} />
     </Routes>
+    </>
   );
 }
 

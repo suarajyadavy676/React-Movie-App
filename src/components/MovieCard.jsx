@@ -2,7 +2,7 @@ function MovieCard(props) {
   const {Poster,Title,Year,Type} = props
   return (
     <>
-      <div className="border-2 border-red-900 border-solid text-center mx-auto">
+      <div className="text-center mx-auto text-white font-serif shadow-2xl shadow-white rounded-lg">
         <img src={Poster} alt="Poster"/>
         <p>{Title}</p>
         <p>{Year}</p>
